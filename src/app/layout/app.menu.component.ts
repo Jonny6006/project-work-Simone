@@ -18,6 +18,12 @@ export class AppMenuComponent implements OnInit {
                 label: '24 Ore Bs',
                 items: [
                     { label: 'Anime App', icon: 'pi pi-fw pi-book', routerLink: ['/anime'] }
+                ],
+            },
+            {
+               
+                items: [
+                    { label: 'Breweries', icon: 'pi pi-fw pi-book', routerLink: ['/breweries'] }
                 ]
             },
             {
