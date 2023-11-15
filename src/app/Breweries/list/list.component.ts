@@ -3,6 +3,13 @@ import { Breweries,  } from '../models/breweries.model';
 import { BreweriesApiService } from '../services/breweries-api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
+interface PageEvent {
+  first: number;
+  rows: number;
+  page: number;
+  pageCount: number;
+}
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -14,7 +21,10 @@ export class ListComponent {
   page: number = 1;
   per_page: number = 10;
   search: string = '';
-
+  first : number = 0;
+  rows : number = 10;
+  
+  
 
  
   constructor(
@@ -62,14 +72,19 @@ export class ListComponent {
 
   detail(id: string) {
     console.log(id);
-    this.router.navigate(['/detail', id]);
+    this.router.navigate(['breweries','detail', id]);
   }
 
   searched() {
-    this.router.navigate(['/list'], {
+    this.router.navigate(['list'], {
       queryParams: { search: this.search},
     });
   }
+
+  onPageChange(event: PageEvent) {
+    this.page= event.page +1;
+    this.getBreweries()
+}
 } 
 
 

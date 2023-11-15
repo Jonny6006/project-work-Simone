@@ -76,7 +76,7 @@
         <th>City</th>
       </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-brewery let-i="rowIndex" (click)="detail(brewery.id)">
+    <ng-template pTemplate="body" let-brewery let-i="rowIndex" >
       <tr (click)="detail(brewery.id)">
         <th>{{ i + 1 }}</th>
         <td>{{ brewery.name }}</td>
@@ -87,26 +87,6 @@
   </p-table>
 </div>
 
-<nav aria-label="Page navigation example">
-  <ul class="flex-auto">
-    <li
-      class="page-item"
-      [ngClass]="{ disabled: page === 1 }"
-      (click)="prevPage()"
-    >
-      <a class="page-link">Previous</a>
-    </li>
-    <li class="page-item" (click)="prevPage()">
-      <a class="page-link">{{ page === 1 ? page : page - 1 }}</a>
-    </li>
-    <li class="page-item">
-      <a class="page-link">{{ page === 1 ? page + 1 : page }}</a>
-    </li>
-    <li class="page-item" (click)="nextPage()">
-      <a class="page-link">{{ page === 1 ? page + 2 : page + 1 }}</a>
-    </li>
-    <li class="page-item" (click)="nextPage()">
-      <a class="page-link">Next</a>
-    </li>
-  </ul>
-</nav>
+<div class="card flex justify-content-center">
+  <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="120" ></p-paginator>
+</div>

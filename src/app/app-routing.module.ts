@@ -9,9 +9,10 @@ import { AppLayoutComponent } from "./layout/app.layout.component";
             {
                 path: '', component: AppLayoutComponent,
                 children: [
-                    { path: 'anime', loadChildren: () => import('./anime/anime.module').then(m => m.AnimeModule) },
-                    { path: 'breweries', loadChildren: () => import('./Breweries/breweries.module').then(m => m.BreweriesModule) },
                     { path: '', loadChildren: () => import('./demo/components/dashboard/dashboard.module').then(m => m.DashboardModule) },
+                    { path: 'anime', loadChildren: () => import('./anime/anime.module').then(m => m.AnimeModule) },
+                    { path: 'chuck-norris', loadChildren: () => import('./chuck-norris/chuck-norris.module').then(m => m.ChuckNorrisModule) },
+                    { path: 'breweries', loadChildren: () => import('./Breweries/breweries.module').then(m => m.BreweriesModule) },
                     { path: 'uikit', loadChildren: () => import('./demo/components/uikit/uikit.module').then(m => m.UIkitModule) },
                     { path: 'utilities', loadChildren: () => import('./demo/components/utilities/utilities.module').then(m => m.UtilitiesModule) },
                     { path: 'documentation', loadChildren: () => import('./demo/components/documentation/documentation.module').then(m => m.DocumentationModule) },
@@ -23,8 +24,15 @@ import { AppLayoutComponent } from "./layout/app.layout.component";
             { path: 'landing', loadChildren: () => import('./demo/components/landing/landing.module').then(m => m.LandingModule) },
             { path: 'notfound', component: NotfoundComponent },
             { path: '**', redirectTo: '/notfound' },
-        ], { scrollPositionRestoration: 'enabled', anchorScrolling: 'enabled', onSameUrlNavigation: 'reload' })
+        ], {
+            scrollPositionRestoration: 'enabled',
+            anchorScrolling: 'enabled',
+            onSameUrlNavigation: 'reload',
+            useHash: false,
+        })
     ],
+
+
     exports: [RouterModule]
 })
 export class AppRoutingModule {
