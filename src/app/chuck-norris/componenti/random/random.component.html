@@ -29,5 +29,29 @@
 </ngb-carousel>
 -->
 
-<h1>Ciao</h1>
+<p-carousel [value]="products" (slide)="onSlide()">
+    <ng-template let-product pTemplate="item">
+        <p-card>
+        <div class="picsum-img-wrapper d-flex justify-content-center">
+            <img [src]="product.Image" alt="Random first slide" style="width: 100%;" />
+        </div>
+    </p-card>
+        <div >
+            <h3>Jokes</h3>
+            <p>{{randomJoke.value}}</p>
+        </div>
+    </ng-template>
+</p-carousel><p-carousel [value]="products" (slide)="onSlide()">
+    <ng-template let-product pTemplate="item">
+        <p-card>
+        <div class="picsum-img-wrapper d-flex justify-content-center">
+            <img [src]="product.Image" alt="Random first slide" style="width: 100%;" />
+        </div>
+    </p-card>
+        <div >
+            <h3>Jokes</h3>
+            <p>{{randomJoke.value}}</p>
+        </div>
+    </ng-template>
+</p-carousel>
 

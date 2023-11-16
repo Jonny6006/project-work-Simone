@@ -76,7 +76,7 @@ export class ListComponent {
   }
 
   searched() {
-    this.router.navigate(['list'], {
+    this.router.navigate(['breweries','list'], {
       queryParams: { search: this.search},
     });
   }

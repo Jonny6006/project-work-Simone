@@ -11,6 +11,8 @@ import { ChuckNorrisComponent } from './chuck-norris.component';
 import { RouterModule } from '@angular/router';
 import { chuckNorrisRoutingModule } from './chuck-norris.routing.module';
 import { CommonModule } from '@angular/common';
+import { DialogModule } from 'primeng/dialog';
+import { CarouselModule } from 'primeng/carousel';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { CommonModule } from '@angular/common';
     chuckNorrisRoutingModule,
     ToastModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    DialogModule,
+    CarouselModule
   ,
   ],
   providers: [],
