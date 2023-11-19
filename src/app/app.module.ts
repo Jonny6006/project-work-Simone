@@ -13,6 +13,9 @@ import { NodeService } from './demo/service/node.service';
 import { PhotoService } from './demo/service/photo.service';
 import { FormsModule } from '@angular/forms';
 
+
+
+
 @NgModule({
     declarations: [
         AppComponent, NotfoundComponent,
@@ -20,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     imports: [
         AppRoutingModule,
         AppLayoutModule,
-        FormsModule
+        FormsModule,
+        
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },

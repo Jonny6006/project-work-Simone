@@ -8,7 +8,9 @@ import { PaginatorModule } from 'primeng/paginator';
 import { ImageModule } from 'primeng/image';
 import { AccordionModule } from 'primeng/accordion';
 import { RatingModule } from 'primeng/rating';
-
+import { DialogModule } from 'primeng/dialog';
+import { CardModule } from 'primeng/card';
+;
 @NgModule({
     declarations: [],
     imports: [
@@ -32,6 +34,8 @@ import { RatingModule } from 'primeng/rating';
         ImageModule,
         AccordionModule,
         RatingModule,
+        DialogModule,
+        CardModule,
     ],
 })
 export class SharedModule {}

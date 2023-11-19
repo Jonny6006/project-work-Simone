@@ -9,11 +9,14 @@ import { NavbarComponent } from './componenti/navbar/navbar.component';
 import { CategorieComponent } from './componenti/categorie/categorie.component';
 import { ChuckNorrisComponent } from './chuck-norris.component';
 import { RouterModule } from '@angular/router';
-import { chuckNorrisRoutingModule } from './chuck-norris.routing.module';
+import { ChuckNorrisRoutingModule} from './chuck-norris.routing.module';
 import { CommonModule } from '@angular/common';
 import { DialogModule } from 'primeng/dialog';
 import { CarouselModule } from 'primeng/carousel';
-
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
+import { SharedModule } from '../shared/shared.module';
+import { MenuModule } from 'primeng/menu';
 
 @NgModule({
   declarations: [
@@ -24,13 +27,17 @@ import { CarouselModule } from 'primeng/carousel';
   ],
   imports: [
     CommonModule,
-    chuckNorrisRoutingModule,
+    ChuckNorrisRoutingModule,
     ToastModule,
     HttpClientModule,
     RouterModule,
     DialogModule,
-    CarouselModule
-  ,
+    CarouselModule,
+    CardModule,
+    ButtonModule,
+    SharedModule,
+    MenuModule,
+  
   ],
   providers: [],
   bootstrap: [ChuckNorrisComponent]

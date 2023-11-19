@@ -76,7 +76,7 @@
         <th>City</th>
       </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-brewery let-i="rowIndex" >
+    <ng-template pTemplate="body" let-brewery let-i="rowIndex"   >
       <tr (click)="detail(brewery.id)">
         <th>{{ i + 1 }}</th>
         <td>{{ brewery.name }}</td>

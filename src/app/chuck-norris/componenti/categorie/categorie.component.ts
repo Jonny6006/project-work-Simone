@@ -7,6 +7,7 @@ import { MessageService } from 'primeng/api';
   selector: 'app-categorie',
   templateUrl: './categorie.component.html',
   styleUrls: ['./categorie.component.scss'],
+  providers : [MessageService]
 
 })
 export class CategorieComponent {
@@ -18,6 +19,7 @@ export class CategorieComponent {
   show = false;
   visible: boolean = false;
   showCategori: string = "";
+
   constructor(
     private serviceChuckNorris: ChuckNorrisService,
     private messageService: MessageService

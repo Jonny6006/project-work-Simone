@@ -31,12 +31,12 @@
         Errore nella chiamata HTTP
     </p-toast>
 </div>
-<div  *ngFor="let category of categorie" class="categoris">
-    <p-button (click)="getCategoryJokes()" icon="pi pi-external-link" label="{{ category }}"></p-button>
+<div  *ngFor="let category of categorie" class="card flex flex-wrap gap-3 justify-content-center" >
+    <p-button (click)="showDialog(category)" icon="pi pi-external-link" label="{{ category }}"></p-button>
 </div>
     <p-dialog [header]="showCategori" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
             <ng-container *ngIf="joke">
-                <div >
+                <div>
                     <p> {{joke.value | uppercase}}</p>
                 </div>
             </ng-container>

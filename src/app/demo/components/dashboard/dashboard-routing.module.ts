@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard.component';
     imports: [RouterModule.forChild([
         { path: '', component: DashboardComponent }
     ])],
+    
     exports: [RouterModule]
 })
 export class DashboardsRoutingModule { }

@@ -2,8 +2,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { RandomComponent } from './componenti/random/random.component';
 import { CategorieComponent } from './componenti/categorie/categorie.component';
 import { NgModule } from "@angular/core";
+import { ChuckNorrisComponent } from './chuck-norris.component';
 
 const ChuckNorrisRouter: Routes = [
+{
+  path : '',
+  component : ChuckNorrisComponent,
+  children : [
   {
     path : 'random',
     component : RandomComponent
@@ -22,7 +27,8 @@ const ChuckNorrisRouter: Routes = [
     redirectTo : 'random',
     pathMatch : 'full'
   },
-  
+]
+}
 
 ];
 
@@ -30,6 +36,6 @@ const ChuckNorrisRouter: Routes = [
   imports: [RouterModule.forChild(ChuckNorrisRouter)],
   exports: [RouterModule],
 })
-export class chuckNorrisRoutingModule {}
+export class ChuckNorrisRoutingModule {}
 
 
