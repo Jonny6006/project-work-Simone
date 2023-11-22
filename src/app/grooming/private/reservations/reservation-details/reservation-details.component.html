@@ -1,0 +1,28 @@
+<div class="card m-3" *ngIf="reservation">
+    <p-card
+      [header]="reservation.nome + ' ' + reservation.cognome"
+      [subheader]="reservation.nomeAnimale"
+    >
+      <div>
+        <p>Data Prenotazione: {{ reservation.date | date }}</p>
+        <p-dropdown
+          [options]="statoReservation"
+          [(ngModel)]="currentStatoPrenotazione"
+          (ngModelChange)="changeStatoPrenotazione($event)"
+          optionLabel="name"
+          placeholder="Select a City"
+        ></p-dropdown>
+        <p *ngIf="reservation.statoPrenotazione === 'done'">
+          Stato: {{ reservation.statoPrenotazione }}
+        </p>
+        <p>Tipo animale: {{ reservation.tipoAnimale }}</p>
+        <p>Note: {{ reservation.noteGroomer }}</p>
+      </div>
+      <div>
+        <p-button severity="danger" (click)="deleteReservation(reservation.id)">
+          <i class="pi pi-trash" style="font-size: 1rem"></i>
+        </p-button>
+      </div>
+    </p-card>
+  </div>
+  

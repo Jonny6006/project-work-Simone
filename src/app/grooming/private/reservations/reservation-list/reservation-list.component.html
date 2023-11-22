@@ -1,0 +1,69 @@
+<!-- <p>reservations-list works!</p>
+<button (click)="goToDetailFake()">Dettaglio</button>
+<button (click)="goToCreateFake()">Crea</button> -->
+
+<p-tabView [(activeIndex)]="activeIndex">
+    <p-tabPanel header="In Coda">
+      <div class="flex">
+        <div
+          class="card m-3"
+          *ngFor="let reservation of reservationsTodoOrDoing$ | async"
+        >
+          <p-card
+            [header]="reservation.nome + ' ' + reservation.cognome"
+            [subheader]="reservation.nomeAnimale"
+            (click)="goToDetail(reservation.id)"
+          >
+            <div>
+              <p>Data Prenotazione: {{ reservation.date | date }}</p>
+              <p>Stato: {{ reservation.statoPrenotazione }}</p>
+              <!-- <p>Tipo animale: {{ reservation.tipoAnimale }}</p>
+              <p>Note: {{ reservation.noteGroomer }}</p> -->
+            </div>
+          </p-card>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel header="Effettuate">
+      <div class="flex">
+        <div
+          class="card m-3"
+          *ngFor="let reservation of reservationsDone$ | async"
+        >
+          <p-card
+            [header]="reservation.nome + ' ' + reservation.cognome"
+            [subheader]="reservation.nomeAnimale"
+            (click)="goToDetail(reservation.id)"
+          >
+            <div>
+              <p>Data Prenotazione: {{ reservation.date | date }}</p>
+              <p>Stato: {{ reservation.statoPrenotazione }}</p>
+              <!-- <p>Tipo animale: {{ reservation.tipoAnimale }}</p>
+                <p>Note: {{ reservation.noteGroomer }}</p> -->
+            </div>
+          </p-card>
+        </div>
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+  
+  <!-- <p-dialog header="Header" [(visible)]="visibleDetail" >
+      <div class="flex">
+          <div
+            class="card m-3"
+          >
+            <p-card
+              [header]="reservation.nome + ' ' + reservation.cognome"
+              [subheader]="reservation.nomeAnimale"
+            >
+              <div>
+                <p>Data Prenotazione: {{ reservation.date | date }}</p>
+                <p>Stato: {{ reservation.statoPrenotazione }}</p>
+                <p>Tipo animale: {{ reservation.tipoAnimale }}</p>
+                <p>Note: {{ reservation.noteGroomer }}</p>
+              </div>
+            </p-card>
+          </div>
+        </div>
+  </p-dialog> -->
+  

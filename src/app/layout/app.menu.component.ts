@@ -20,6 +20,7 @@ export class AppMenuComponent implements OnInit {
                     { label: 'Anime App', icon: 'pi pi-fw pi-book', routerLink: ['/anime'] }
                 ],
             },
+            
             {
                
                 items: [
@@ -31,6 +32,12 @@ export class AppMenuComponent implements OnInit {
                 items: [
                     { label: 'Chuck Norris', icon: 'pi pi-fw pi-book', routerLink: ['/chuck-norris'] }
                 ],
+            },
+            {
+               
+                items: [
+                    { label: 'Grooming-Shop', icon: 'pi pi-fw pi-book', routerLink: ['/grooming'] }
+                ]
             },
             {
                 label: 'Home',

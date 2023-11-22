@@ -13,8 +13,8 @@ import { AppLayoutComponent } from "./layout/app.layout.component";
                     { path: 'anime', loadChildren: () => import('./anime/anime.module').then(m => m.AnimeModule) },
                     { path: 'chuck-norris', loadChildren: () => import('./chuck-norris/chuck-norris.module').then(m => m.ChuckNorrisModule) },
                     { path: 'breweries', loadChildren: () => import('./Breweries/breweries.module').then(m => m.BreweriesModule) },
+                    { path: 'grooming', loadChildren: () => import('./grooming/grooming.module').then(m => m.GroomingModule) },
                     { path: 'uikit', loadChildren: () => import('./demo/components/uikit/uikit.module').then(m => m.UIkitModule) },
-                    
                     { path: 'documentation', loadChildren: () => import('./demo/components/documentation/documentation.module').then(m => m.DocumentationModule) },
                     
                     { path: 'pages', loadChildren: () => import('./demo/components/pages/pages.module').then(m => m.PagesModule) }

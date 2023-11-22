@@ -10,6 +10,7 @@ import { AccordionModule } from 'primeng/accordion';
 import { RatingModule } from 'primeng/rating';
 import { DialogModule } from 'primeng/dialog';
 import { CardModule } from 'primeng/card';
+
 ;
 @NgModule({
     declarations: [],
@@ -23,6 +24,7 @@ import { CardModule } from 'primeng/card';
         ImageModule,
         AccordionModule,
         RatingModule,
+        
     ],
     exports: [
         CommonModule,

@@ -12,13 +12,14 @@ import { IconService } from './demo/service/icon.service';
 import { NodeService } from './demo/service/node.service';
 import { PhotoService } from './demo/service/photo.service';
 import { FormsModule } from '@angular/forms';
+import { GroomingComponent } from './grooming/grooming.component';
 
 
 
 
 @NgModule({
     declarations: [
-        AppComponent, NotfoundComponent,
+        AppComponent, NotfoundComponent, GroomingComponent,
     ],
     imports: [
         AppRoutingModule,

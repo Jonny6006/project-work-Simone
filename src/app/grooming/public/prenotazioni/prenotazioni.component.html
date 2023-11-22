@@ -1,0 +1,69 @@
+<div class="m-4">
+    <form
+      class="flex flex-column"
+      [formGroup]="prenotazioniForm"
+      (ngSubmit)="createPrenotazione()"
+    >
+      <span class="p-float-label mb-2">
+        <input
+          pInputText
+          id="name"
+          name="name"
+          class="w-full"
+          formControlName="nome"
+        />
+        <label>Nome</label>
+      </span>
+      <span class="p-float-label mb-2">
+        <input
+          pInputText
+          id="name"
+          name="name"
+          class="w-full"
+          formControlName="cognome"
+        />
+        <label>Cognome</label>
+      </span>
+      <span class="p-float-label my-5">
+        <p-dropdown
+          [options]="tipoAnimaleToSelect"
+          placeholder="Seleziona un tipo di animale"
+          optionLabel="name"
+          (onChange)="
+            prenotazioniForm.controls['tipoAnimale'].setValue($event.value.code)
+          "
+          inputId="float-label"
+        ></p-dropdown>
+        <label for="float-label">Seleziona animale</label>
+      </span>
+      <span class="p-float-label mb-2">
+        <input
+          pInputText
+          id="nameAnimale"
+          name="nameAnimale"
+          class="w-full"
+          formControlName="nomeAnimale"
+        />
+        <label>Nome animale</label>
+      </span>
+      <span class="p-float-label mb-2">
+        <p-calendar formControlName="date" class="w-full"></p-calendar>
+  
+        <label>Data Prenotazione</label>
+      </span>
+      <span class="p-float-label mb-2">
+        <textarea
+          id="float-input"
+          rows="5"
+          cols="30"
+          pInputTextarea
+          formControlName="noteGroomer"
+          class="w-full"
+        ></textarea>
+        <label for="float-input">Note</label>
+      </span>
+      <p-button type="submit" label="Crea" severity="info"></p-button>
+    </form>
+  </div>
+  <p-toast></p-toast>
+  
