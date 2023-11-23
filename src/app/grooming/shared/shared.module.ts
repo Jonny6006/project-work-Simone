@@ -8,12 +8,12 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenubarModule } from 'primeng/menubar';
 import { TableModule } from 'primeng/table';
-import { NavbarComponent } from './navbar/navbar.component';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ToastModule } from 'primeng/toast';
 import { TabViewModule } from 'primeng/tabview';
 import { DialogModule } from 'primeng/dialog';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 const COMPONENTS = [NavbarComponent];

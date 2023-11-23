@@ -27,7 +27,7 @@ const groomingroutes: Routes = [
   ];
   
   @NgModule({
-    imports: [RouterModule.forRoot(groomingroutes)],
+    imports: [RouterModule.forChild(groomingroutes)],
     exports: [RouterModule],
   })
   export class GroomingRoutingModule {}

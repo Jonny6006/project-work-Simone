@@ -19,7 +19,7 @@ import { GroomingComponent } from './grooming/grooming.component';
 
 @NgModule({
     declarations: [
-        AppComponent, NotfoundComponent, GroomingComponent,
+        AppComponent, NotfoundComponent,
     ],
     imports: [
         AppRoutingModule,
