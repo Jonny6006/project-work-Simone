@@ -7,7 +7,8 @@ import { MessageService } from 'primeng/api';
 @Component({
   selector: 'app-prenotazioni',
   templateUrl: './prenotazioni.component.html',
-  styleUrls: ['./prenotazioni.component.scss']
+  styleUrls: ['./prenotazioni.component.scss'],
+  providers: [MessageService],
 })
 export class PrenotazioniComponent {
   tipoAnimaleToSelect = [

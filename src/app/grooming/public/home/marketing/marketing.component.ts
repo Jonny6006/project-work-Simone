@@ -30,6 +30,6 @@ export class MarketingComponent {
   ];
 
   goToCreateReservation() {
-    this.router.navigate(['public', 'prenotazioni']);
+    this.router.navigate(['grooming','public','prenotazioni']);
   }
 }

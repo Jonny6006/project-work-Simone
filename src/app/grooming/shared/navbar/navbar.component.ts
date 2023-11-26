@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { AuthService } from '../../services/auth/auth.service';
 import { Router } from '@angular/router';
@@ -8,14 +8,14 @@ import { Router } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   items: MenuItem[] | undefined;
   isLogged: boolean = false;
 
   constructor(
     private readonly authService: AuthService,
     private readonly router: Router
-  ) {}
+  ) { }
   ngOnInit() {
     this.authService.me().subscribe((user) => {
       this.isLogged = !!user;
@@ -23,25 +23,25 @@ export class NavbarComponent {
         {
           label: 'Home',
           icon: 'pi pi-fw pi-home',
-          routerLink: '/public/home',
+          routerLink: '/grooming/public/home',
           visible: !this.isLogged,
         },
         {
           label: 'Prenotazioni',
           icon: 'pi pi-fw pi-calendar',
-          routerLink: '/public/prenotazioni',
+          routerLink: '/grooming/public/prenotazioni',
           visible: !this.isLogged,
         },
         {
           label: 'Login',
           icon: 'pi pi-fw pi-user',
-          routerLink: '/public/auth/login',
+          routerLink: '/grooming/public/auth/login',
           visible: !this.isLogged,
         },
         {
           label: 'Lista Prenotazioni',
           icon: 'pi pi-fw pi-calendar',
-          routerLink: '/private/reservations',
+          routerLink: '/grooming/private/reservations',
           visible: this.isLogged,
         },
         {
@@ -50,7 +50,7 @@ export class NavbarComponent {
           visible: this.isLogged,
           command: () => {
             this.authService.logout();
-            this.router.navigate(['/public']);
+            this.router.navigate(['grooming/public']);
           },
         },
       ];

@@ -7,11 +7,14 @@ import { GroomingComponent } from './grooming.component';
 
 
 
+
+
 @NgModule({
   declarations: [
-   GroomingComponent
+    GroomingComponent
   ],
   imports: [
+
     
     GroomingRoutingModule,
     SharedGroomingModule,

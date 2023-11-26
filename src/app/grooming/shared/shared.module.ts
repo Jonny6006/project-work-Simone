@@ -1,19 +1,20 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ButtonModule } from 'primeng/button';
-import { CardModule } from 'primeng/card';
-import { DividerModule } from 'primeng/divider';
-import { DropdownModule } from 'primeng/dropdown';
-import { InputTextModule } from 'primeng/inputtext';
-import { MenubarModule } from 'primeng/menubar';
-import { TableModule } from 'primeng/table';
-import { CalendarModule } from 'primeng/calendar';
-import { InputTextareaModule } from 'primeng/inputtextarea';
-import { ToastModule } from 'primeng/toast';
-import { TabViewModule } from 'primeng/tabview';
-import { DialogModule } from 'primeng/dialog';
-import { NavbarComponent } from './navbar/navbar.component';
+import { ButtonModule } from "primeng/button";
+import { CardModule } from "primeng/card";
+import { DividerModule } from "primeng/divider";
+import { DropdownModule } from "primeng/dropdown";
+import { InputTextModule } from "primeng/inputtext";
+import { MenubarModule } from "primeng/menubar";
+import { TableModule } from "primeng/table";
+import { NavbarComponent } from "./navbar/navbar.component";
+import { CalendarModule } from "primeng/calendar";
+import { InputTextareaModule } from "primeng/inputtextarea";
+import { ToastModule } from "primeng/toast";
+import { TabViewModule } from "primeng/tabview";
+import { DialogModule } from "primeng/dialog";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+
 
 
 const COMPONENTS = [NavbarComponent];
