@@ -3,11 +3,12 @@ import { ReservationCreateComponent } from "./reservation-create/reservation-cre
 import { ReservationDetailsComponent } from "./reservation-details/reservation-details.component";
 import { ReservationListComponent } from "./reservation-list/reservation-list.component";
 import { NgModule } from "@angular/core";
+import { ReservationsComponent } from "./reservations.component";
 
 const routes: Routes = [
     {
       path: '',
-      component: ReservationListComponent,
+      component: ReservationsComponent,
       children: [
         {
           path: 'list',

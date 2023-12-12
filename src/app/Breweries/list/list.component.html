@@ -49,44 +49,60 @@
   </ul>
 </nav> -->
 
-
 <!--Prime ng-->
 
+<div class="card flex justify-content-center my-5">
+    <p-card header="Benvenuto su Breweies! Esplora il Mondo della Birra">
+        <p class="m-0">
+            Se sei un appassionato di birra o semplicemente desideri scoprire
+            nuove birrerie e le loro offerte, sei nel posto giusto! Breweies è
+            la tua guida digitale alle birrerie degli Stati Uniti, un'esperienza
+            unica che ti permette di esplorare le ricche tradizioni e le varietà
+            di birra in ogni angolo del paese.
+        </p>
+    </p-card>
+</div>
 
 <div class="card">
+    <div class="p-inputgroup">
+        <span class="p-inputgroup-addon">
+            <i class="pi pi-search"></i>
+        </span>
 
+        <input input [(ngModel)]="search" pInputText placeholder="Search" />
+        <p-button
+            href="/list"
+            label="Search"
+            type="submit"
+            (click)="searched()"
+        ></p-button>
+    </div>
 
-  <div class="p-inputgroup">
-    <span class="p-inputgroup-addon">
-      <i class="pi pi-search"></i>
-    </span>
-
-    <input input [(ngModel)]="search" pInputText placeholder="Search" />
-    <p-button href="/list" label="Search" type="submit" (click)="searched()"></p-button>
-
-  </div>
-
-
-  <p-table [value]="breweries" [tableStyle]="{ 'min-width': '50rem' }">
-    <ng-template pTemplate="header">
-      <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Coutry</th>
-        <th>City</th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-brewery let-i="rowIndex"   >
-      <tr (click)="detail(brewery.id)" [style]="{'cursor' : 'pointer'}">
-        <th>{{ i + 1 }}</th>
-        <td>{{ brewery.name }}</td>
-        <td>{{ brewery.country }}</td>
-        <td>{{ brewery.city }}</td>
-      </tr>
-    </ng-template>
-  </p-table>
+    <p-table [value]="breweries" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Coutry</th>
+                <th>City</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-brewery let-i="rowIndex">
+            <tr (click)="detail(brewery.id)" [style]="{ cursor: 'pointer' }">
+                <th>{{ i + 1 }}</th>
+                <td>{{ brewery.name }}</td>
+                <td>{{ brewery.country }}</td>
+                <td>{{ brewery.city }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
 </div>
 
 <div class="card flex justify-content-center">
-  <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="120" ></p-paginator>
+    <p-paginator
+        (onPageChange)="onPageChange($event)"
+        [first]="first"
+        [rows]="rows"
+        [totalRecords]="120"
+    ></p-paginator>
 </div>

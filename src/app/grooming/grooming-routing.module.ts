@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { authGuard } from './services/guard/auth.guard';
 import { RouterModule, Routes } from '@angular/router';
+import { GroomingComponent } from './grooming.component';
 
 const groomingroutes: Routes = [
     {
       path: '',
+      component : GroomingComponent,
       children: [
         {
           path: 'private',

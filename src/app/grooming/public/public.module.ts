@@ -6,11 +6,13 @@ import { PublicRoutingModule } from './public-routing.module';
 
 
 
+
 @NgModule({
   declarations: [PublicComponent],
   imports: [
     CommonModule,
-    PublicRoutingModule
+    PublicRoutingModule,
+    
   ]
 })
 export class PublicModule { }

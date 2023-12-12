@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
-
-
 import { GroomingRoutingModule } from './grooming-routing.module';
+
+
 import { SharedGroomingModule } from './shared/shared.module';
 import { GroomingComponent } from './grooming.component';
-
 
 
 
@@ -14,10 +13,8 @@ import { GroomingComponent } from './grooming.component';
     GroomingComponent
   ],
   imports: [
-
-    
     GroomingRoutingModule,
-    SharedGroomingModule,
+    SharedGroomingModule
   ]
 })
 export class GroomingModule { }

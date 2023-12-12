@@ -40,7 +40,7 @@ export class ReservationListComponent {
       )
     );
   goToDetailFake() {
-    this.router.navigate(['private', 'reservations', 'reservation'], {
+    this.router.navigate(['grooming','private', 'reservations', 'reservation'], {
       queryParams: {
         id: 99,
       },
@@ -48,11 +48,11 @@ export class ReservationListComponent {
   }
 
   goToCreateFake() {
-    this.router.navigate(['private', 'reservations', 'create']);
+    this.router.navigate(['grooming','private', 'reservations', 'create']);
   }
 
   goToDetail(id: number) {
-    this.router.navigate(['private', 'reservations', 'reservation'], {
+    this.router.navigate(['grooming','private', 'reservations', 'reservation'], {
       queryParams: { id },
     });
   }

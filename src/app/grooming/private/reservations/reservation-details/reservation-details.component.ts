@@ -43,8 +43,8 @@ export class ReservationDetailsComponent {
       this.grooomingService
         .edit(this.reservation!)
         .subscribe((reservations) => {
-          // this.reservation = reservation;
-          this.router.navigate(['private']);
+        // this.reservation = reservation;
+          this.router.navigate(['grooming','private']);
         });
     }
   }
@@ -53,7 +53,7 @@ export class ReservationDetailsComponent {
     this.grooomingService.delete(id).subscribe({
       next: (reservations) => {
         console.log(reservations);
-        this.router.navigate(['private']);
+        this.router.navigate(['grooming','private']);
       },
     });
   }
