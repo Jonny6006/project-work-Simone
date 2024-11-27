@@ -10,6 +10,10 @@ import { AccordionModule } from 'primeng/accordion';
 import { RatingModule } from 'primeng/rating';
 import { DialogModule } from 'primeng/dialog';
 import { CardModule } from 'primeng/card';
+import { ToolbarModule } from 'primeng/toolbar';
+import { TabMenuModule } from 'primeng/tabmenu';
+import { MenubarModule } from 'primeng/menubar';
+import { DividerModule } from 'primeng/divider';
 
 ;
 @NgModule({
@@ -38,6 +42,11 @@ import { CardModule } from 'primeng/card';
         RatingModule,
         DialogModule,
         CardModule,
+        ToolbarModule,
+        TabMenuModule,
+        MenubarModule,
+        DividerModule
+
     ],
 })
 export class SharedModule {}

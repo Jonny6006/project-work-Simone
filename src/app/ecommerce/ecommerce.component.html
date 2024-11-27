@@ -1,0 +1,17 @@
+
+<!-- <p-menubar [model]="menuItems" class="navbar">
+  <div class="navbar-title">Carrello</div>
+  <div class="cart-icon-container">
+    <a [routerLink]="['/ecommerce/cart']">
+      <i class="pi pi-shopping-cart"></i>
+      <span class="cart-badge">{{ (cartService.cartItems$ | async)?.length }}</span>
+    </a>
+  </div>
+</p-menubar> -->
+
+
+<app-navbar></app-navbar>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+

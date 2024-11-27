@@ -1,0 +1,35 @@
+
+.global{
+    display: flex;
+    justify-content: center;
+  
+   
+  }
+  
+  .p-menubar {   
+      background-color: #2e2c2e;  // Colore di sfondo della barra
+     
+      display: flex;
+      justify-content: center; /* Centra gli elementi orizzontalmente */
+      align-items: center;     /* Centra gli elementi verticalmente */
+     
+           
+    }
+    
+    .nav-icons {
+      display: flex;
+      justify-content: center;
+      
+      align-items: center;
+      gap: 70px;                  // Distanza tra le icone
+      
+    }
+    
+    .p-button-rounded {
+      font-size: 24px;            // Dimensione delle icone
+      color: #333;                // Colore delle icone
+    }
+  
+  
+  
+  

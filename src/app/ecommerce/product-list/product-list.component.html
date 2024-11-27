@@ -1,0 +1,27 @@
+<div class="row">
+  <p-card>
+    <div *ngFor="let product of products; trackBy: trackByProductId" class="col-md-6 mb-4">
+      <div class="card">
+        <img [src]="product.imageUrl" class="card-img-top" [alt]="product.name">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text"><strong>€{{ product.price.toFixed(2) }}</strong></p>
+          <p-button icon="pi pi-shopping-cart" label="Aggiungi al carrello"   class="btn btn-primary" (click)="addToCart(product)">
+            
+          </p-button>
+        </div>
+      </div>
+    </div>
+  </p-card>
+  </div>
+
+  <p-button label="Add to Cart" icon="pi pi-shopping-cart" outlined="true" styleclass="w-full" class="p-element"><button pripple="" pautofocus="" class="p-ripple p-element p-button p-component p-button-outlined w-full" type="button" data-pc-name="button" data-pc-section="root"><!----><!----><span data-pc-section="icon" class="p-button-icon p-button-icon-left pi pi-shopping-cart ng-star-inserted"></span>
+  <span class="p-button-label ng-star-inserted" aria-hidden="false" data-pc-section="label">Add to Cart</span>
+  <span class="p-ink" aria-hidden="true" role="presentation" style="height: 283px; width: 283px; top: -113.297px; left: -11px;"></span></button></p-button>
+
+  <p-button label="Add to Cart" icon="pi pi-shopping-cart" outlined="true" styleclass="w-full" class="p-element" ></p-button>
+
+  
+  
+ 

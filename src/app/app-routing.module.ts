@@ -14,6 +14,7 @@ import { AppLayoutComponent } from "./layout/app.layout.component";
                     { path: 'chuck-norris', loadChildren: () => import('./chuck-norris/chuck-norris.module').then(m => m.ChuckNorrisModule) },
                     { path: 'breweries', loadChildren: () => import('./Breweries/breweries.module').then(m => m.BreweriesModule) },
                     { path: 'grooming', loadChildren: () => import('./grooming/grooming.module').then(m => m.GroomingModule) },
+                    { path: 'ecommerce', loadChildren: () => import('./ecommerce/ecommerce.module').then(m => m.EcommerceModule) },
                     { path: 'uikit', loadChildren: () => import('./demo/components/uikit/uikit.module').then(m => m.UIkitModule) },
                     { path: 'documentation', loadChildren: () => import('./demo/components/documentation/documentation.module').then(m => m.DocumentationModule) },
                     
