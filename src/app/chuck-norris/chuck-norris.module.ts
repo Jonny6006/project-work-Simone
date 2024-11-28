@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ToastModule } from 'primeng/toast';
 import { RandomComponent } from './componenti/random/random.component';
 import { NavbarComponent } from './componenti/navbar/navbar.component';
@@ -18,28 +18,20 @@ import { ButtonModule } from 'primeng/button';
 import { SharedModule } from '../shared/shared.module';
 import { MenuModule } from 'primeng/menu';
 
-@NgModule({
-  declarations: [
-   ChuckNorrisComponent,
-    RandomComponent,
-    NavbarComponent,
-    CategorieComponent
-  ],
-  imports: [
-    CommonModule,
-    ChuckNorrisRoutingModule,
-    ToastModule,
-    HttpClientModule,
-    RouterModule,
-    DialogModule,
-    CarouselModule,
-    CardModule,
-    ButtonModule,
-    SharedModule,
-    MenuModule,
-  
-  ],
-  providers: [],
-  bootstrap: [ChuckNorrisComponent]
-})
+@NgModule({ declarations: [
+        ChuckNorrisComponent,
+        RandomComponent,
+        NavbarComponent,
+        CategorieComponent
+    ],
+    bootstrap: [ChuckNorrisComponent], imports: [CommonModule,
+        ChuckNorrisRoutingModule,
+        ToastModule,
+        RouterModule,
+        DialogModule,
+        CarouselModule,
+        CardModule,
+        ButtonModule,
+        SharedModule,
+        MenuModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class ChuckNorrisModule { }
